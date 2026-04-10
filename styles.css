@@ -270,17 +270,100 @@ h1 {
 
 /* Print Optimization */
 @media print {
+    @page {
+        size: A4;
+        margin: 6mm; /* Medium-tight margins */
+    }
+
     body {
-        background-color: white;
-        padding: 0;
+        background-color: white !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        font-size: 10.5px !important; 
+        line-height: 1.35 !important; 
     }
 
     .resume-container {
-        box-shadow: none;
-        padding: 0;
-        margin: 0;
-        width: 100%;
-        max-width: none;
+        box-shadow: none !important;
+        padding: 10px 20px !important; 
+        margin: 0 !important;
+        width: 100% !important;
+        max-width: none !important;
+        border-radius: 0 !important;
+    }
+
+    header {
+        margin-bottom: 10px !important;
+        padding-bottom: 8px !important;
+    }
+
+    .header-main {
+        gap: 10px !important;
+        margin-bottom: 5px !important;
+    }
+
+    .profile-pic {
+        width: 65px !important; 
+        height: 65px !important;
+    }
+
+    h1 {
+        font-size: 1.6rem !important; /* Slightly smaller to save header space */
+        margin-bottom: 0px !important;
+    }
+
+    .subtitle {
+        font-size: 0.85rem !important;
+        margin-bottom: 5px !important;
+    }
+
+    .contact-info {
+        display: flex !important;
+        flex-direction: row !important;
+        flex-wrap: nowrap !important;
+        justify-content: space-between !important;
+        gap: 5px !important;
+        font-size: 0.7rem !important;
+        margin-top: 2px !important;
+    }
+
+    .section {
+        margin-bottom: 8px !important; /* Extremely tight section spacing */
+    }
+
+    .section-title {
+        font-size: 0.9rem !important;
+        margin-bottom: 5px !important;
+        padding-bottom: 3px !important;
+    }
+
+    .skills-grid {
+        gap: 8px !important;
+    }
+
+    .skill-category h3 {
+        font-size: 0.8rem !important;
+    }
+
+    .experience-item {
+        margin-bottom: 8px !important;
+    }
+
+    .experience-header {
+        margin-bottom: 0px !important;
+    }
+
+    .role {
+        font-size: 0.9rem !important;
+    }
+
+    .experience-details li {
+        margin-bottom: 0px !important; /* No space between bullets */
+        font-size: 0.85rem !important;
+    }
+
+    .section-content p {
+        margin-bottom: 0px !important;
     }
 
     .no-print {
@@ -288,16 +371,8 @@ h1 {
     }
 
     a {
-        text-decoration: none;
-        color: black;
-    }
-
-    .section {
-        page-break-inside: avoid;
-    }
-
-    .experience-item {
-        page-break-inside: avoid;
+        text-decoration: none !important;
+        color: black !important;
     }
 }
 
